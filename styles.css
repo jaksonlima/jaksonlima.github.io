@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+
+  -webkit-font-smoothing: antialiased;
+
+  box-sizing: border-box;
+}
+
 body {
-  background-color: aqua;
+  background: linear-gradient(to left, #00c9ff, #92fe9d);
+}
+
+h1 {
+  text-align: center;
+  font-weight: 50px;
+  transform: filter 0.2s;
+}
+
+h1:hover {
+  filter: brightness(90%);
 }
