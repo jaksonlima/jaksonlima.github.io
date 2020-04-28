@@ -138,8 +138,10 @@ h2 {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 950px) {
   .detalhe {
-    width: 400px;
+    margin: 0 25px;
+    padding: 0 10px;
+    height: 800px;
   }
 }
