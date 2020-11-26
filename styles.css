@@ -4,13 +4,15 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  -webkit-font-smoothing: antialiased;
+
   box-sizing: border-box;
 }
 
+html,
 body {
   font: 400 14px Roboto sans-serif;
   background: rgba(240, 240, 245, 0.8);
+  -webkit-font-smoothing: antialiased;
 }
 
 ul {
@@ -45,9 +47,6 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: start;
-
-  width: 300px;
-  height: 900px;
 }
 
 .info h1 {
@@ -92,12 +91,15 @@ h2 {
   justify-content: flex-start;
   align-items: flex-start;
 
-  width: 900px;
-  height: 900px;
   background: #dadae2;
-  box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 12px 3px 22px 11px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  padding-left: 20px;
+  padding: 20px;
+
+  transition: transform 1s;
+}
+.detalhe:hover {
+  transform: scale(1.1);
 }
 
 .detalhe hr {
@@ -107,7 +109,9 @@ h2 {
   background: #9b9898;
   margin: 20px 0 20px 0;
 }
-
+.habilidades {
+  margin-bottom: 26px;
+}
 .habilidades ul li + li {
   margin-top: 30px;
 }
@@ -132,16 +136,24 @@ h2 {
   color: #242323;
 }
 
+.link {
+  font-size: 13px;
+  color: #53a1d3;
+}
+
+.cursor {
+  cursor: progress;
+}
+
 @media (max-width: 1200px) {
   .info {
-    height: 500px;
+    margin-bottom: 32px;
   }
 }
 
 @media (max-width: 950px) {
   .detalhe {
-    margin: 0 25px 20px 25px;
+    margin: 25px !important;
     padding: 0 10px;
-    height: 800px;
   }
 }
