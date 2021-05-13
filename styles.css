@@ -11,8 +11,11 @@
 html,
 body {
   font: 400 14px Roboto sans-serif;
-  background: rgba(240, 240, 245, 0.8);
   -webkit-font-smoothing: antialiased;
+  /* background: rgba(240, 240, 245, 0.8); */
+
+  background: url("/assets/schema.gif") no-repeat fixed;
+  /* background-size: cover; */
 }
 
 ul {
@@ -52,10 +55,21 @@ h2 {
 .info h1 {
   margin: 0 0 38px 0;
   font-size: 38px;
-  color: #316b94;
+  color: rgba(56, 157, 215, 1);
 }
 
-.info img {
+.info .gif {
+  margin-top: 50px;
+}
+
+.info .git,
+.insta,
+.linkedin {
+  width: 107px;
+  height: 28px;
+}
+
+.info .image-regular {
   width: 190px;
   height: 190px;
   border-radius: 200px;
@@ -68,7 +82,7 @@ h2 {
   text-decoration: none;
   text-align: center;
   font-size: 18px;
-  color: #267cb9;
+  color: rgba(56, 157, 215, 1);
   cursor: pointer;
   transition: filter 1s;
 }
@@ -129,11 +143,16 @@ h2 {
   color: #267cb9;
 }
 
+.formacao h2,
+h3,
+h5 {
+  color: #dadae2;
+}
+
 .formacao h3 {
   font-size: 18px;
   font-weight: 500;
   font-style: italic;
-  color: #242323;
 }
 
 .link {
