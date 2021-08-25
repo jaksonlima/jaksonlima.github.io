@@ -14,7 +14,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   background-color: #0d1117;
-  color: rgb(198, 216, 231)
+  color: rgb(198, 216, 231);
 }
 
 a {
@@ -23,10 +23,10 @@ a {
 }
 
 .container {
-  height: 100vh;
-  margin-top: 32px;
-  margin-bottom: 100px;
+  min-height: 100vh;
+  margin: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
 }
@@ -95,7 +95,7 @@ a {
   border-radius: 50%;
 }
 
-.emoji:hover::after {
+.emoji::after {
   content: "🎓 Ciência da Computação";
   width: 125px;
   padding: 6px;
@@ -107,6 +107,12 @@ a {
   top: 0px;
   font-size: 10px;
   color: white;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.emoji:hover::after {
+  opacity: 1;
 }
 
 .border {
@@ -118,4 +124,48 @@ a {
 .social {
   margin-top: 33px;
   margin-bottom: 6px;
+}
+
+.rotate-center {
+  height: 30px;
+  -webkit-animation: rotate-center 3000ms ease-in-out 2000ms infinite reverse backwards;
+  animation: rotate-center 3000ms ease-in-out 2000ms infinite reverse backwards;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 1101px) {
+  .img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-internal {
+    margin: auto;
+  }
+
+  .container img {
+    max-width: 100%;
+  }
 }
