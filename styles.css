@@ -66,6 +66,10 @@ a {
   align-items: flex-start;
 }
 
+img  {
+  margin: 5px
+}
+
 .ul {
   margin: 20px;
 }
